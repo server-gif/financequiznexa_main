@@ -3,9 +3,10 @@
   Renders public\images\og\og-default.png (1200x675 social preview card).
 
 .DESCRIPTION
-  The default Open Graph image is a typographic brand card drawn entirely with GDI+:
-  the deep-purple gradient, dot grid, soft light circles and the FinanceQuizNexa
-  wordmark in the same palette as the site and the quiz sub-site.
+  The default Open Graph image is a brand card drawn with GDI+: the deep-purple
+  gradient, dot grid and soft light circles, with the FinanceQuizNexa logo tile
+  from scripts\assets\ above the wordmark, in the same palette as the site and
+  the quiz sub-site.
 
   Run it again whenever the brand name, tagline or palette changes:
 
@@ -50,6 +51,15 @@ for ($dy = 0; $dy -lt $h; $dy += 28) {
 
 $g.FillEllipse((New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(20, 255, 255, 255))), 820, -110, 440, 440)
 $g.FillEllipse((New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(16, 255, 255, 255))), -120, 340, 520, 520)
+
+# Brand logo tile, centred above the wordmark. Rendered by make-brand-assets.ps1.
+$logoPath = Join-Path $PSScriptRoot 'assets\financequiznexa-logo-box-512.png'
+if (-not (Test-Path $logoPath)) { throw "Missing logo master: $logoPath" }
+$logo = New-Object System.Drawing.Bitmap($logoPath)
+$logoSize = 160
+$g.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
+$g.DrawImage($logo, [single](($w - $logoSize) / 2), [single]62, [single]$logoSize, [single]$logoSize)
+$logo.Dispose()
 
 # Wordmark: "FinanceQuiz" in white, "Nexa" in the brand gold — joined, no space.
 $titleFont = New-Object System.Drawing.Font('Segoe UI', 104, [System.Drawing.FontStyle]::Bold, [System.Drawing.GraphicsUnit]::Pixel)

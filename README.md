@@ -34,14 +34,16 @@ src/
 │   └── SEO/               title, description, canonical, Open Graph, Twitter, JSON-LD
 ├── config/
 │   ├── ads.js             ← ALL ad unit paths live here (test units)
-│   └── site.js            site name, URL, navigation
+│   └── site.js            site name, URL, navigation, brand logo path
 ├── data/                  blogs.js (articles), categories.js
 ├── hooks/                 useGoogleAdManager.js, useArticleLink.js
 ├── layouts/MainLayout.jsx header → top ad → page → footer ad → footer
 ├── pages/                 Home, Blog (all + category), BlogDetail, About, NotFound
 └── services/googleAdManager.js   the only code that touches window.googletag
-public/images/             photos/ (article covers), og/ (default social card), fallback.svg
-scripts/                   fetch-article-photos.ps1 downloads photos/, make-og-default.ps1 the social card
+public/favicon.png, apple-touch-icon.png   browser tab + home-screen icons
+public/images/             brand/ (logo), photos/ (article covers), og/ (default social card), fallback.svg
+scripts/                   fetch-article-photos.ps1 downloads photos/, make-brand-assets.ps1 renders the logo sizes,
+                           make-og-default.ps1 the social card, assets/ holds the 512px logo master
 ```
 
 ## Google Ad Manager

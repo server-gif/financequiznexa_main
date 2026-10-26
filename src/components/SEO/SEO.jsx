@@ -32,7 +32,14 @@ export default function SEO({
         image: [imageUrl],
         datePublished: article.publishedTime,
         author: { '@type': 'Organization', name: article.author },
-        publisher: { '@type': 'Organization', name: SITE.name },
+        // Google uses the publisher logo next to article results, so it must be an
+        // absolute, crawlable URL of the brand emblem itself.
+        publisher: {
+          '@type': 'Organization',
+          name: SITE.name,
+          url: SITE.url,
+          logo: { '@type': 'ImageObject', url: absolute(SITE.logo) },
+        },
         mainEntityOfPage: canonical,
       }
     : null;

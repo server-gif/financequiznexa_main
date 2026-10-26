@@ -36,10 +36,11 @@
 
 .header__mark {
   display: block;
-  /* The logo art sits inside a 512 canvas with ~5% transparent padding, so the
-     box is slightly larger than the old full-bleed tile to keep the same weight. */
+  /* 192px source PNG with a little transparent padding around the emblem, so
+     the square box keeps the mark at roughly the size of the old tile. */
   width: 40px;
   height: 40px;
+  object-fit: contain;
   filter: drop-shadow(0 2px 5px rgba(124, 58, 237, 0.35));
 }
 
