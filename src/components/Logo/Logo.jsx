@@ -1,5 +1,5 @@
 /**
- * FinzoriaFinance brand mark — a folded-ribbon "F" with three ascending
+ * FinanceQuizNexa brand mark — a folded-ribbon "F" with three ascending
  * financial bars on a mint-to-forest gradient tile (512x512 source art).
  * Ids are suffixed with useId() because the mark is rendered in both the
  * header and the footer, and duplicate ids would make the paint references
@@ -21,24 +21,24 @@ export default function Logo({ className = '' }) {
     <svg className={className} viewBox="0 0 512 512" aria-hidden="true" focusable="false">
       <defs>
         <linearGradient id={id.bg} x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#10C9A0" />
-          <stop offset="0.55" stopColor="#008F70" />
-          <stop offset="1" stopColor="#005642" />
+          <stop offset="0" stopColor="#C084FC" />
+          <stop offset="0.55" stopColor="#8B5CF6" />
+          <stop offset="1" stopColor="#4C1D95" />
         </linearGradient>
         <linearGradient id={id.mint} x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#B8FF9B" />
-          <stop offset="1" stopColor="#32D889" />
+          <stop offset="0" stopColor="#E9D5FF" />
+          <stop offset="1" stopColor="#C084FC" />
         </linearGradient>
         <linearGradient id={id.whiteMint} x1="0" y1="0" x2="1" y2="1">
           <stop offset="0" stopColor="#FFFFFF" />
-          <stop offset="1" stopColor="#A5FFD9" />
+          <stop offset="1" stopColor="#F3E8FF" />
         </linearGradient>
         <linearGradient id={id.gold} x1="0" y1="0" x2="0.8" y2="1">
           <stop offset="0" stopColor="#FFF66B" />
           <stop offset="1" stopColor="#FFC928" />
         </linearGradient>
         <filter id={id.shadow} x="-20%" y="-20%" width="140%" height="150%">
-          <feDropShadow dx="0" dy="7" stdDeviation="7" floodColor="#003F34" floodOpacity="0.35" />
+          <feDropShadow dx="0" dy="7" stdDeviation="7" floodColor="#2B0B45" floodOpacity="0.35" />
         </filter>
       </defs>
       <rect x="28" y="28" width="456" height="456" rx="76" fill={`url(#${id.bg})`} />
@@ -50,7 +50,7 @@ export default function Logo({ className = '' }) {
         />
         <path
           d="M153 209c0-31 15-52 43-66 15-8 34-11 56-11h110c-15 30-39 46-77 46h-52c-28 0-43 17-43 43v20h-37Z"
-          fill="#53E8A2"
+          fill="#A78BFA"
           opacity="0.92"
         />
         <path

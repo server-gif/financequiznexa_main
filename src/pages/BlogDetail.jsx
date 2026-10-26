@@ -26,9 +26,9 @@ export default function BlogDetail() {
         title={blog.title}
         description={blog.excerpt}
         image={blog.ogImage}
-        // ogImage is our own cover illustration, not the in-article photograph,
-        // so it gets its own description rather than reusing blog.imageAlt.
-        imageAlt={`${blog.title} — cover illustration`}
+        // The cover photograph doubles as the social preview, so the article
+        // alt text describes what the photo actually shows.
+        imageAlt={blog.imageAlt}
         type="article"
         path={`/blog/${blog.slug}`}
         article={{ publishedTime: blog.isoDate, author: blog.author, section: blog.category }}

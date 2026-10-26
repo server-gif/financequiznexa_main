@@ -36,8 +36,8 @@ export default function Terms() {
 
             <h2 id="copyright">Copyright and content ownership</h2>
             <p>
-              Every article, guide, headline, summary and original illustration published on {SITE.name} is
-              work we created for this site and is owned by {SITE.name}. It is protected by copyright, and
+              Every article, guide, headline and summary published on {SITE.name} is work we created for
+              this site and is owned by {SITE.name}. It is protected by copyright, and
               © {new Date().getFullYear()} {SITE.name}. No content may be republished, mirrored, translated for
               publication or reproduced in full on another website, in print, or on a social channel without
               our prior written permission.
@@ -45,11 +45,15 @@ export default function Terms() {
 
             <h2 id="third-party-material">Third-party material we do not own</h2>
             <p>
-              Some article photographs are licensed from third-party stock libraries. Those images remain the
-              copyright of their respective photographers and are <strong>not</strong> our work: they are not
-              covered by the permission below, and re-uploading or reusing them elsewhere is not authorised by
-              us. Company, product, exchange and institution names mentioned in articles remain trademarks of
-              their owners — mentioning them is descriptive only and does not imply endorsement or affiliation.
+              Article cover photographs are licensed, not created, by {SITE.name}: they come from Pexels under
+              the Pexels Licence. The photographers who shot them keep their rights, and the licence covers our
+              use on this site only. We self-host the files so pages load without third-party image requests,
+              and the source of each photo is recorded in the site’s image credits file.
+            </p>
+            <p>
+              Company, product, exchange and institution names mentioned in articles remain trademarks of
+              their owners — mentioning them is descriptive only and does not imply endorsement or
+              affiliation.
             </p>
 
             <h2 id="permitted-use">What you are welcome to do</h2>
@@ -72,8 +76,11 @@ export default function Terms() {
                 Scraping, mirroring or bulk-copying the site, including feeding our content into AI training or
                 automated content-generation systems.
               </li>
-              <li>Passing our articles or illustrations off as someone else’s work.</li>
-              <li>Redistributing the licensed photographs that appear on article pages.</li>
+              <li>Passing our articles off as someone else’s work.</li>
+              <li>
+                Re-using the photographs we license and host as if they were licensed to you — obtain your own
+                licence from the original source before publishing them anywhere else.
+              </li>
             </ul>
             <p>
               Need a guide reproduced, translated or adapted at scale? Ask us first through the contact below

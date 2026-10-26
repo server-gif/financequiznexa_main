@@ -16,11 +16,7 @@ export default function useTheme() {
   const toggleTheme = useCallback(() => {
     setTheme((prev) => {
       const next = prev === 'dark' ? 'light' : 'dark';
-      if (next === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      } else {
-        document.documentElement.removeAttribute('data-theme');
-      }
+      document.documentElement.setAttribute('data-theme', next);
       try {
         localStorage.setItem(STORAGE_KEY, next);
       } catch (e) { /* private mode — just session */ }
